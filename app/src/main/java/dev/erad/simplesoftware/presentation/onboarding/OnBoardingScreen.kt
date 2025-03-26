@@ -26,7 +26,10 @@ import dev.erad.simplesoftware.ui.theme.Dimens.PageIndicatorWidth
 import kotlinx.coroutines.launch
 
 @Composable
-fun OnBoardingScreen(modifier: Modifier = Modifier) {
+fun OnBoardingScreen(
+    modifier: Modifier = Modifier,
+    event: (OnBoardingEvent) -> Unit
+) {
     Column(
         modifier = modifier.fillMaxSize()
     ) {
@@ -80,8 +83,8 @@ fun OnBoardingScreen(modifier: Modifier = Modifier) {
 
                 NewsButton(text = buttonState.value[1], onClick = {
                     scope.launch {
-                        if (pagerState.currentPage == 3) {
-                            // TODO: Navigate to Home
+                        if (pagerState.currentPage == 2) {
+                            event(OnBoardingEvent.SaveAppEntry)
                         } else {
                             pagerState.animateScrollToPage(
                                 page = pagerState.currentPage + 1
