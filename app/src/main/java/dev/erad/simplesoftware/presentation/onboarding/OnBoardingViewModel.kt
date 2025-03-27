@@ -3,7 +3,7 @@ package dev.erad.simplesoftware.presentation.onboarding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dev.erad.simplesoftware.domain.use_cases.AppEntryUseCases
+import dev.erad.simplesoftware.domain.use_cases.app_entry.AppEntryUseCases
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dev.erad.simplesoftware.domain.use_cases.AppEntryUseCases
+import dev.erad.simplesoftware.domain.use_cases.app_entry.AppEntryUseCases
 import dev.erad.simplesoftware.presentation.navgraph.Route
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn

@@ -7,9 +7,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dev.erad.simplesoftware.data.manager.LocalUserManagerImpl
 import dev.erad.simplesoftware.domain.manager.LocalUserManager
-import dev.erad.simplesoftware.domain.use_cases.AppEntryUseCases
-import dev.erad.simplesoftware.domain.use_cases.ReadAppEntry
-import dev.erad.simplesoftware.domain.use_cases.SaveAppEntry
+import dev.erad.simplesoftware.domain.use_cases.app_entry.AppEntryUseCases
+import dev.erad.simplesoftware.domain.use_cases.app_entry.ReadAppEntry
+import dev.erad.simplesoftware.domain.use_cases.app_entry.SaveAppEntry
 import javax.inject.Singleton
 
 @Module
