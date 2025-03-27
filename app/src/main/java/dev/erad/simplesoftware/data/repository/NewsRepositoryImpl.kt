@@ -8,7 +8,6 @@ import dev.erad.simplesoftware.data.remote.NewsPagingSource
 import dev.erad.simplesoftware.domain.model.Article
 import dev.erad.simplesoftware.domain.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
-import java.io.File.separator
 
 class NewsRepositoryImpl(
     private val newsApi: NewsApi
