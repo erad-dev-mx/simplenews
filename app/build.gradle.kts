@@ -10,11 +10,11 @@ plugins {
 }
 
 android {
-    namespace = "dev.erad.simplesoftware"
+    namespace = "erad.simple.simplenews"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "dev.erad.simplesoftware"
+        applicationId = "erad.simple.simplenews"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
