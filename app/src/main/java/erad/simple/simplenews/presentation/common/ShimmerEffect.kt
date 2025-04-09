@@ -25,6 +25,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import erad.simple.simplenews.R
+import erad.simple.simplenews.ui.theme.Dimens
 import erad.simple.simplenews.ui.theme.Dimens.ArticleCardSize
 import erad.simple.simplenews.ui.theme.Dimens.ExtraSmallPadding
 import erad.simple.simplenews.ui.theme.Dimens.MediumPadding1
@@ -33,35 +34,33 @@ import erad.simple.simplenews.ui.theme.SimplenewsTheme
 fun Modifier.shimmerEffect() = composed {
     val transition = rememberInfiniteTransition()
     val alpha = transition.animateFloat(
-        initialValue = 0.2f,
-        targetValue = 0.9f,
-        animationSpec = infiniteRepeatable(
+        initialValue = 0.2f, targetValue = 0.9f, animationSpec = infiniteRepeatable(
             animation = tween(durationMillis = 1000),
             repeatMode = RepeatMode.Reverse
         )
     ).value
-    background(color = colorResource(id = R.color.teal_200).copy(alpha = alpha))
+    background(color = colorResource(id = R.color.purple_200).copy(alpha = alpha))
 }
 
 @Composable
-fun ArticleCardShimmerEffect(
-    modifier: Modifier = Modifier,
-) {
-    Row(modifier = modifier) {
+fun ArticleCardShimmerEffect(modifier: Modifier = Modifier) {
+    Row(
+        modifier = modifier
+    ) {
         Box(
-            modifier = modifier
+            modifier = Modifier
                 .size(ArticleCardSize)
                 .clip(MaterialTheme.shapes.medium)
                 .shimmerEffect()
         )
         Column(
             verticalArrangement = Arrangement.SpaceAround,
-            modifier = modifier
+            modifier = Modifier
                 .padding(horizontal = ExtraSmallPadding)
                 .height(ArticleCardSize)
         ) {
             Box(
-                modifier = modifier
+                modifier = Modifier
                     .fillMaxWidth()
                     .height(30.dp)
                     .padding(horizontal = MediumPadding1)
@@ -71,12 +70,13 @@ fun ArticleCardShimmerEffect(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Box(
-                    modifier = modifier
+                    modifier = Modifier
                         .fillMaxWidth(0.5f)
-                        .height(30.dp)
                         .padding(horizontal = MediumPadding1)
+                        .height(15.dp)
                         .shimmerEffect()
                 )
+
             }
         }
     }
