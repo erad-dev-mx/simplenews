@@ -1,6 +1,5 @@
 package erad.simple.simplenews.data.remote
 
-import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import erad.simple.simplenews.domain.model.Article
