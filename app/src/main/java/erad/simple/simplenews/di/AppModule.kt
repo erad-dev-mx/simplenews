@@ -15,6 +15,7 @@ import erad.simple.simplenews.domain.use_cases.app_entry.ReadAppEntry
 import erad.simple.simplenews.domain.use_cases.app_entry.SaveAppEntry
 import erad.simple.simplenews.domain.use_cases.news.GetNews
 import erad.simple.simplenews.domain.use_cases.news.NewsUseCases
+import erad.simple.simplenews.domain.use_cases.news.SearchNews
 import erad.simple.simplenews.util.Constants.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -58,7 +59,8 @@ object AppModule {
     @Singleton
     fun provideNewsUseCases(newsRepository: NewsRepository): NewsUseCases {
         return NewsUseCases(
-            getNews = GetNews(newsRepository)
+            getNews = GetNews(newsRepository),
+            searchNews = SearchNews(newsRepository)
         )
     }
 }
